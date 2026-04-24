@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --bg-primary: #fdfaf5;
+  --bg-sidebar: #f4eee6;
+  --border-color: #e0d6c8;
+  --text-main: #3d3d3d;
+  --text-muted: #998b7a;
+  --brand-primary: #8a9a5b;
+  --brand-heading: #5a5a40;
+  --card-stack: #e8e0d4;
+  --accent-warm: #d27d59;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+.name-card-shadow {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-link {
+  @apply block px-4 py-2 rounded-full transition-all duration-200;
+}
+
+.sidebar-link-active {
+  @apply bg-[var(--brand-primary)] text-white shadow-sm;
+}
+
+.sidebar-link-inactive {
+  @apply hover:bg-white/50 text-[var(--text-main)];
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+}
+
